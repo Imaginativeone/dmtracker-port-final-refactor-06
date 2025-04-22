@@ -1,4 +1,8 @@
-import { PrismaClient } from '@prisma/client'
+// import { PrismaClient } from '@prisma/client'
+// import { PrismaClient } from '../prisma/generated/clientPg'
+// import { PrismaClient } from "../generated/prisma/client.js"
+import { PrismaClient } from '../app/generated/prisma/client.js'
+
 const prisma = new PrismaClient()
 
 async function main() {
@@ -17,8 +21,3 @@ main()
     prisma.$disconnect()
     process.exit(1)
   })
-
-// In package.json, add:
-// "prisma": {
-//   "seed": "ts-node prisma/seed.ts"
-// }
