@@ -1,6 +1,11 @@
 export default async function handler(req, res) {
+
+  console.log('request', req);
+
+  // Postman fails to get this too
+
   if (req.method === 'GET') {
-    const posts = await { testObject: "Test String" }
-    res.status(200).json(posts)
+    const test = await { testObject: "Test String" }
+    res.status(200).json(test)
   }
 }
